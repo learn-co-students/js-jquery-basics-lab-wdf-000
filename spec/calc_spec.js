@@ -31,8 +31,5 @@ describe('jQuery Calculator', function() {
       expect(result('+', 12, 2)).toEqual(14);
   });
 
-
-
-
 });
   
