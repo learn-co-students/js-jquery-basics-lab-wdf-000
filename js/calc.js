@@ -50,15 +50,20 @@ function result(operator, num1, num2) {
   return calculate(operator, num1, num2);
 }
 
+// Too much parseInt here. need to refactor the whole solution to remove that.
 function calculate(operator, num1, num2) {
   switch(true) {
     case operator === "+":
+      $('#result').html(parseInt(num1) + parseInt(num2));
       return parseInt(num1) + parseInt(num2);
     case operator === "-":
+      $('#result').html(parseInt(num1) - parseInt(num2));
       return parseInt(num1) - parseInt(num2);
     case operator === "*":
+      $('#result').html(parseInt(num1) * parseInt(num2));
       return parseInt(num1) * parseInt(num2);
     case operator === "/":
+      $('#result').html(parseInt(num1) / parseInt(num2));
       return parseInt(num1) / parseInt(num2);
   }
 }
