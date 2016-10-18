@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  doMath();
+});
+
 function doMath() {
   $('#equals').on('click', function() {
     let inputs = collectInputs(); // returns an object
@@ -12,9 +16,12 @@ function doMath() {
 
     let check = validate(inputs.operation, inputs.number1, inputs.number2);
     if (check === true) {
-      console.log(result(inputs.operation, inputs.number1, inputs.number2));   
+      let r = result(inputs.operation, inputs.number1, inputs.number2);
+      console.log(r);
+      return r;
     } else {
       console.log(check);
+      return check;
     }
   });
 }
@@ -55,7 +62,3 @@ function calculate(operator, num1, num2) {
       return parseInt(num1) / parseInt(num2);
   }
 }
-
-$(document).ready(function() {
-  doMath();
-});
