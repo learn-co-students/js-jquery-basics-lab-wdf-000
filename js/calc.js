@@ -18,9 +18,11 @@ function validate(operation, number1, number2) {
   var operators = ['+', '-', '*', '/'];
 
   if (isNaN(number1) === true || isNaN(number2) === true) {
+    $("#result").text('Sorry, one of those is not a valid number!');
     return "Sorry, one of those is not a valid number!";
   }
   else if ($.inArray(operation, operators) === -1) {
+    $('#result').html("Sorry, that is not a valid operator");
     return "Sorry, that is not a valid operator";
   }
   else {
