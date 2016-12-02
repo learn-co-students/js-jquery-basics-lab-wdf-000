@@ -1,3 +1,5 @@
+'use strict';
+
 describe('jQuery Calculator', function() {
 
   beforeEach(function() {
@@ -35,4 +37,3 @@ describe('jQuery Calculator', function() {
 
 
 });
-  
