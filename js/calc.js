@@ -18,9 +18,11 @@ function doMath() {
 
 function validate(op, num1, num2){
   if (isNaN(num1) || isNaN(num2) ){
-    return $('#result').empty().append("Sorry, one of those is not a valid number!");
+    $('#result').empty().append("Sorry, one of those is not a valid number!");
+    return "Sorry, one of those is not a valid number!";
   } else if (op != "+" && op != "-" && op != "*" && op != "/"){
-    return $('#result').empty().append("Sorry, that is not a valid operator");
+    $('#result').empty().append("Sorry, that is not a valid operator");
+    return "Sorry, that is not a valid operator";
   } else {
   return result(op, num1, num2);
   }
